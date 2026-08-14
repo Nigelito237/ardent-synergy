@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Ardent Synergy</title>
+
+    <!-- Ardent Synergy Brand Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           ARDENT SYNERGY BRAND COLOURS
+           ===================================================== */
+
+        :root {
+            --navy-blue: #002D72;
+            --sky-blue: #5BA9FF;
+            --light-blue: #EAF4FF;
+            --light-grey: #E9EEF5;
+            --white: #FFFFFF;
+            --body-text: #334E77;
+            --dark-text: #0B192C;
+
+            --font-headings: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+
+
+        /* =====================================================
+           GLOBAL RESET
+           ===================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: var(--font-body);
+            font-size: 12pt;
+            line-height: 1.6;
+            color: var(--navy-blue);
+            background-color: #FAFCFF;
+
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        header {
+            background-color: var(--white);
+
+            padding: 20px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom: 3px solid var(--sky-blue);
+
+            box-shadow: 0 4px 20px rgba(0, 45, 114, 0.06);
+
+            position: relative;
+            z-index: 10;
+        }
+
+
+        /* =====================================================
+           LOGO
+           ===================================================== */
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .logo-container img {
+            height: 75px;
+            width: auto;
+            display: block;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+           ===================================================== */
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+
+        nav a {
+            font-family: var(--font-headings);
+            font-weight: 600;
+            font-size: 10.5pt;
+
+            color: var(--navy-blue);
+
+            text-decoration: none;
+            text-transform: uppercase;
+
+            letter-spacing: 0.4px;
+
+            padding: 8px 0;
+
+            position: relative;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        nav a:hover,
+        nav a.active {
+            color: var(--sky-blue);
+        }
+
+
+        nav a:hover {
+            transform: translateY(-1px);
+        }
+
+
+        nav a.active::after {
+            content: '';
+
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 3px;
+
+            background-color: var(--sky-blue);
+
+            border-radius: 2px;
+        }
+
+
+        /* =====================================================
+           MAIN
+           ===================================================== */
+
+        main {
+            flex: 1;
+
+            width: 90%;
+            max-width: 1140px;
+
+            margin: 50px auto 70px;
+        }
+
+
+        /* =====================================================
+           PAGE INTRO
+           ===================================================== */
+
+        .page-intro {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--navy-blue) 0%,
+                    #001F50 100%
+                );
+
+            color: var(--white);
+
+            padding: 65px 45px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            margin-bottom: 50px;
+
+            box-shadow:
+                0 12px 35px rgba(0, 45, 114, 0.14);
+        }
+
+
+        .page-intro h1 {
+            font-family: var(--font-headings);
+
+            font-size: 32pt;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+
+        .page-intro p {
+            color: var(--sky-blue);
+
+            font-family: var(--font-headings);
+
+            font-size: 14pt;
+
+            font-weight: 500;
+
+            max-width: 700px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           SECTION TITLES
+           ===================================================== */
+
+        .section-title {
+            font-family: var(--font-headings);
+
+            font-size: 24pt;
+
+            font-weight: 700;
+
+            color: var(--navy-blue);
+
+            margin-bottom: 30px;
+
+            position: relative;
+
+            padding-bottom: 12px;
+        }
+
+
+        .section-title::after {
+            content: '';
+
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+
+            width: 60px;
+            height: 4px;
+
+            background-color: var(--sky-blue);
+
+            border-radius: 2px;
+        }
+
+
+        /* =====================================================
+           CONTENT BLOCK
+           ===================================================== */
+
+        .content-block {
+            background-color: var(--white);
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(0, 45, 114, 0.05);
+
+            box-shadow:
+                0 5px 25px rgba(0, 45, 114, 0.04);
+
+            margin-bottom: 50px;
+        }
+
+
+        .content-block p {
+            margin-bottom: 20px;
+
+            font-size: 12pt;
+
+            color: var(--body-text);
+
+            line-height: 1.8;
+        }
+
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .content-block strong {
+            color: var(--navy-blue);
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           VISION & MISSION
+           ===================================================== */
+
+        .split-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+
+            margin-bottom: 55px;
+        }
+
+
+        .info-card {
+            position: relative;
+
+            background-color: var(--white);
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(0, 45, 114, 0.06);
+
+            border-top: 4px solid var(--sky-blue);
+
+            box-shadow:
+                0 8px 25px rgba(0, 45, 114, 0.04);
+
+            transition:
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        /* Same hover style as Home page */
+
+        .info-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 16px 35px rgba(0, 45, 114, 0.10);
+
+            border-color: var(--sky-blue);
+        }
+
+
+        .info-card h2 {
+            font-family: var(--font-headings);
+
+            font-size: 19pt;
+
+            color: var(--navy-blue);
+
+            margin-bottom: 18px;
+        }
+
+
+        .info-card p {
+            color: var(--body-text);
+
+            font-size: 12pt;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           BRAND PROMISE
+           ===================================================== */
+
+        .promise-intro {
+            background-color: var(--light-blue);
+
+            border-left: 5px solid var(--sky-blue);
+
+            padding: 28px 30px;
+
+            border-radius: 8px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .promise-intro p {
+            color: var(--navy-blue);
+
+            font-family: var(--font-headings);
+
+            font-size: 13pt;
+
+            font-weight: 600;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           BRAND PROMISE CARDS
+           ===================================================== */
+
+        .promise-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-bottom: 55px;
+        }
+
+
+        .promise-card {
+            position: relative;
+
+            background-color: var(--white);
+
+            padding: 32px 28px;
+
+            border-radius: 10px;
+
+            border: 1px solid rgba(0, 45, 114, 0.07);
+
+            box-shadow:
+                0 8px 24px rgba(0, 45, 114, 0.035);
+
+            min-height: 190px;
+
+            transition:
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        /* Hover effect */
+
+        .promise-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 16px 35px rgba(0, 45, 114, 0.10);
+
+            border-color: var(--sky-blue);
+        }
+
+
+        .promise-card::before {
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 0;
+            height: 4px;
+
+            background-color: var(--sky-blue);
+
+            border-radius: 10px 0 0 0;
+
+            transition: width 0.3s ease;
+        }
+
+
+        .promise-card:hover::before {
+            width: 100%;
+        }
+
+
+        .promise-card h3 {
+            font-family: var(--font-headings);
+
+            font-size: 15pt;
+
+            color: var(--navy-blue);
+
+            margin-bottom: 12px;
+        }
+
+
+        .promise-card p {
+            font-size: 11pt;
+
+            color: #4A658E;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CLOSING STATEMENT
+           ===================================================== */
+
+        .closing-quote {
+            background-color: var(--white);
+
+            border-top: 4px solid var(--sky-blue);
+
+            padding: 40px 30px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 6px 25px rgba(0, 45, 114, 0.04);
+        }
+
+
+        .closing-quote p {
+            font-family: var(--font-headings);
+
+            font-size: 18pt;
+
+            font-weight: 600;
+
+            font-style: italic;
+
+            color: var(--navy-blue);
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        footer {
+            background-color: var(--navy-blue);
+
+            color: var(--white);
+
+            padding: 28px 20px;
+
+            text-align: center;
+
+            font-family: var(--font-body);
+
+            font-size: 10.5pt;
+
+            letter-spacing: 0.4px;
+
+            margin-top: auto;
+
+            border-top: 4px solid var(--sky-blue);
+        }
+
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 18px;
+
+                padding: 20px 5%;
+            }
+
+
+            nav {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 18px;
+            }
+
+
+            .split-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .promise-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .logo-container img {
+                height: 62px;
+            }
+
+
+            nav {
+                gap: 14px;
+            }
+
+
+            nav a {
+                font-size: 9pt;
+            }
+
+
+            main {
+                width: 92%;
+
+                margin-top: 30px;
+            }
+
+
+            .page-intro {
+                padding: 50px 25px;
+            }
+
+
+            .page-intro h1 {
+                font-size: 25pt;
+            }
+
+
+            .page-intro p {
+                font-size: 12pt;
+            }
+
+
+            .section-title {
+                font-size: 20pt;
+            }
+
+
+            .content-block {
+                padding: 28px 22px;
+            }
+
+
+            .info-card {
+                padding: 30px 25px;
+            }
+
+
+            .promise-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .promise-intro {
+                padding: 25px 22px;
+            }
+
+
+            .closing-quote p {
+                font-size: 15pt;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+        <div class="logo-container">
+
+            <img
+                src="Images/logo2.jpg"
+                alt="Ardent Synergy Logo"
+            >
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="about.html"
+                class="active"
+            >
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="team.html">
+                Our Team
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             PAGE INTRO
+             ================================================= -->
+
+        <section class="page-intro">
+
+            <h1>
+                About Ardent Synergy
+            </h1>
+
+            <p>
+                People. Organisations. Standards. Transformation.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             WHO WE ARE
+             ================================================= -->
+
+        <section class="content-block">
+
+            <h2 class="section-title">
+                Who We Are
+            </h2>
+
+
+            <p>
+                Ardent Synergy is a professional training, consultancy,
+                safeguarding, outsourcing, and workforce development
+                organisation.
+            </p>
+
+
+            <p>
+                We are fundamentally built on the core principle that
+                <strong>
+                    people and organisations perform better when service
+                    standards improve.
+                </strong>
+            </p>
+
+
+            <p>
+                Our objective is to guide corporate teams, schools, and
+                institutional environments toward sustainable operational
+                success. Our solutions target structural alignment and
+                systematic capacity improvement.
+            </p>
+
+
+            <p>
+                By partnering deeply with our clients, we bridge performance
+                gaps, build individual capabilities, and establish robust
+                compliance parameters. At Ardent Synergy, we do not merely
+                provide services; <strong>we help create standards.</strong>
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             VISION & MISSION
+             ================================================= -->
+
+        <h2 class="section-title">
+            Our Vision & Mission
+        </h2>
+
+
+        <section class="split-grid">
+
+
+            <div class="info-card">
+
+                <h2>
+                    Our Vision
+                </h2>
+
+                <p>
+                    To be a leading catalyst for excellence and transformation
+                    in people and organisations across the region and beyond.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h2>
+                    Our Mission
+                </h2>
+
+                <p>
+                    To empower individuals and organisations through
+                    high-quality training, consultancy, safeguarding,
+                    outsourcing, and workforce development solutions,
+                    raising service standards and driving sustainable success.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             BRAND PROMISE
+             ================================================= -->
+
+        <section class="content-block">
+
+            <h2 class="section-title">
+                Our Brand Promise
+            </h2>
+
+
+            <div class="promise-intro">
+
+                <p>
+                    "To help people and organisations become better, stronger,
+                    safer, more professional, and more effective than they
+                    were before engaging with us."
+                </p>
+
+            </div>
+
+
+            <div class="promise-grid">
+
+
+                <div class="promise-card">
+
+                    <h3>
+                        Excellence
+                    </h3>
+
+                    <p>
+                        Delivering consistent high-quality solutions across
+                        all operational tasks.
+                    </p>
+
+                </div>
+
+
+                <div class="promise-card">
+
+                    <h3>
+                        Integrity
+                    </h3>
+
+                    <p>
+                        Preserving clear, transparent, and ethical standards
+                        across our engagements.
+                    </p>
+
+                </div>
+
+
+                <div class="promise-card">
+
+                    <h3>
+                        Professionalism
+                    </h3>
+
+                    <p>
+                        Conducting engagements with competence, respect,
+                        accountability, and structural discipline.
+                    </p>
+
+                </div>
+
+
+                <div class="promise-card">
+
+                    <h3>
+                        Transformation
+                    </h3>
+
+                    <p>
+                        Creating meaningful and lasting improvements within
+                        systems, organisations, and teams.
+                    </p>
+
+                </div>
+
+
+                <div class="promise-card">
+
+                    <h3>
+                        Partnership
+                    </h3>
+
+                    <p>
+                        Cultivating collaborative relationships that support
+                        strategic goals and sustainable progress.
+                    </p>
+
+                </div>
+
+
+                <div class="promise-card">
+
+                    <h3>
+                        Impact
+                    </h3>
+
+                    <p>
+                        Creating clear, practical value that contributes to
+                        sustainable workforce and organisational success.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CLOSING BRAND STATEMENT
+             ================================================= -->
+
+        <section class="closing-quote">
+
+            <p>
+                "We do not merely provide services. We help create standards."
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Ardent Synergy Global
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

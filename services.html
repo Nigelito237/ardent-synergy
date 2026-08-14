@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Services | Ardent Synergy</title>
+
+
+    <!-- ARDENT SYNERGY BRAND FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+
+        /* =====================================================
+           BRAND COLOURS
+           ===================================================== */
+
+        :root {
+
+            --navy-blue: #002D72;
+
+            --sky-blue: #5BA9FF;
+
+            --light-blue: #EAF4FF;
+
+            --light-grey: #E9EEF5;
+
+            --white: #FFFFFF;
+
+            --body-text: #334E77;
+
+            --dark-text: #0B192C;
+
+            --font-headings: 'Montserrat', sans-serif;
+
+            --font-body: 'Open Sans', sans-serif;
+
+        }
+
+
+        /* =====================================================
+           RESET
+           ===================================================== */
+
+        * {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family: var(--font-body);
+
+            font-size: 12pt;
+
+            line-height: 1.6;
+
+            color: var(--navy-blue);
+
+            background-color: #FAFCFF;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        header {
+
+            background-color: var(--white);
+
+            padding: 20px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            border-bottom: 3px solid var(--sky-blue);
+
+            box-shadow: 0 4px 20px rgba(0, 45, 114, 0.06);
+
+            position: relative;
+
+            z-index: 10;
+
+        }
+
+
+        /* =====================================================
+           LOGO
+           ===================================================== */
+
+        .logo-container {
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+        .logo-container img {
+
+            height: 75px;
+
+            width: auto;
+
+            display: block;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+           ===================================================== */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 32px;
+
+        }
+
+
+        nav a {
+
+            font-family: var(--font-headings);
+
+            font-weight: 600;
+
+            font-size: 10.5pt;
+
+            color: var(--navy-blue);
+
+            text-decoration: none;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.4px;
+
+            padding: 8px 0;
+
+            position: relative;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+
+        }
+
+
+        nav a:hover,
+        nav a.active {
+
+            color: var(--sky-blue);
+
+        }
+
+
+        nav a:hover {
+
+            transform: translateY(-1px);
+
+        }
+
+
+        nav a.active::after {
+
+            content: '';
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 3px;
+
+            background-color: var(--sky-blue);
+
+            border-radius: 2px;
+
+        }
+
+
+        /* =====================================================
+           MAIN
+           ===================================================== */
+
+        main {
+
+            flex: 1;
+
+            width: 90%;
+
+            max-width: 1140px;
+
+            margin: 50px auto 70px;
+
+        }
+
+
+        /* =====================================================
+           PAGE INTRO
+           ===================================================== */
+
+        .page-intro {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--navy-blue) 0%,
+                    #001F50 100%
+                );
+
+            color: var(--white);
+
+            padding: 65px 45px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            margin-bottom: 50px;
+
+            box-shadow:
+                0 12px 35px rgba(0, 45, 114, 0.14);
+
+        }
+
+
+        .page-intro h1 {
+
+            font-family: var(--font-headings);
+
+            font-size: 32pt;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .page-intro p {
+
+            color: var(--sky-blue);
+
+            font-family: var(--font-headings);
+
+            font-size: 14pt;
+
+            font-weight: 500;
+
+            max-width: 750px;
+
+            margin: 0 auto;
+
+        }
+
+
+        /* =====================================================
+           SECTION TITLE
+           ===================================================== */
+
+        .section-title {
+
+            font-family: var(--font-headings);
+
+            font-size: 24pt;
+
+            font-weight: 700;
+
+            color: var(--navy-blue);
+
+            margin-bottom: 35px;
+
+            position: relative;
+
+            padding-bottom: 12px;
+
+        }
+
+
+        .section-title::after {
+
+            content: '';
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            width: 60px;
+
+            height: 4px;
+
+            background-color: var(--sky-blue);
+
+            border-radius: 2px;
+
+        }
+
+
+        /* =====================================================
+           INTRODUCTION
+           ===================================================== */
+
+        .intro-block {
+
+            background-color: var(--white);
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(0, 45, 114, 0.05);
+
+            box-shadow:
+                0 5px 25px rgba(0, 45, 114, 0.04);
+
+            margin-bottom: 50px;
+
+        }
+
+
+        .intro-block p {
+
+            color: var(--body-text);
+
+            font-size: 12pt;
+
+            line-height: 1.8;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .intro-block p:last-child {
+
+            margin-bottom: 0;
+
+        }
+
+
+        /* =====================================================
+           SERVICES GRID
+           ===================================================== */
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        /* =====================================================
+           SERVICE CARD
+           ===================================================== */
+
+        .service-card {
+
+            position: relative;
+
+            background-color: var(--white);
+
+            border: 1px solid rgba(0, 45, 114, 0.07);
+
+            padding: 38px 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 45, 114, 0.04);
+
+            min-height: 260px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+
+        }
+
+
+        /* SAME HOVER STYLE YOU LIKED */
+
+        .service-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 18px 38px rgba(0, 45, 114, 0.11);
+
+            border-color: var(--sky-blue);
+
+        }
+
+
+        /* BLUE TOP LINE */
+
+        .service-card::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 0;
+
+            height: 4px;
+
+            background-color: var(--sky-blue);
+
+            transition: width 0.3s ease;
+
+        }
+
+
+        .service-card:hover::before {
+
+            width: 100%;
+
+        }
+
+
+        .service-number {
+
+            font-family: var(--font-headings);
+
+            color: var(--sky-blue);
+
+            font-size: 11pt;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .service-card h3 {
+
+            font-family: var(--font-headings);
+
+            font-size: 16pt;
+
+            font-weight: 700;
+
+            color: var(--navy-blue);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .service-card p {
+
+            color: #4A658E;
+
+            font-size: 11pt;
+
+            line-height: 1.75;
+
+            flex-grow: 1;
+
+        }
+
+
+        /* =====================================================
+           APPROACH SECTION
+           ===================================================== */
+
+        .approach-block {
+
+            background-color: var(--light-blue);
+
+            border-left: 5px solid var(--sky-blue);
+
+            padding: 35px 40px;
+
+            border-radius: 10px;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        .approach-block h2 {
+
+            font-family: var(--font-headings);
+
+            font-size: 20pt;
+
+            color: var(--navy-blue);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .approach-block p {
+
+            color: var(--body-text);
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           CTA
+           ===================================================== */
+
+        .cta-banner {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--navy-blue),
+                    #001A44
+                );
+
+            color: var(--white);
+
+            padding: 50px 35px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+        }
+
+
+        .cta-banner h2 {
+
+            font-family: var(--font-headings);
+
+            font-size: 22pt;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .cta-banner p {
+
+            color: #DCEBFF;
+
+            font-size: 12pt;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .cta-button {
+
+            display: inline-block;
+
+            background-color: var(--sky-blue);
+
+            color: var(--navy-blue);
+
+            text-decoration: none;
+
+            padding: 13px 30px;
+
+            border-radius: 6px;
+
+            font-family: var(--font-headings);
+
+            font-weight: 700;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+
+        }
+
+
+        .cta-button:hover {
+
+            background-color: var(--white);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        footer {
+
+            background-color: var(--navy-blue);
+
+            color: var(--white);
+
+            padding: 28px 20px;
+
+            text-align: center;
+
+            font-size: 10.5pt;
+
+            letter-spacing: 0.4px;
+
+            margin-top: auto;
+
+            border-top: 4px solid var(--sky-blue);
+
+        }
+
+
+        footer p {
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 18px;
+
+                padding: 20px 5%;
+
+            }
+
+
+            nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 18px;
+
+            }
+
+
+            .services-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .logo-container img {
+
+                height: 62px;
+
+            }
+
+
+            nav {
+
+                gap: 14px;
+
+            }
+
+
+            nav a {
+
+                font-size: 9pt;
+
+            }
+
+
+            main {
+
+                width: 92%;
+
+                margin-top: 30px;
+
+            }
+
+
+            .page-intro {
+
+                padding: 50px 25px;
+
+            }
+
+
+            .page-intro h1 {
+
+                font-size: 25pt;
+
+            }
+
+
+            .page-intro p {
+
+                font-size: 12pt;
+
+            }
+
+
+            .section-title {
+
+                font-size: 20pt;
+
+            }
+
+
+            .intro-block {
+
+                padding: 28px 22px;
+
+            }
+
+
+            .services-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .approach-block {
+
+                padding: 28px 22px;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+        <div class="logo-container">
+
+            <img
+                src="Images/logo2.jpg"
+                alt="Ardent Synergy Logo"
+            >
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html" class="active">
+                Services
+            </a>
+
+            <a href="team.html">
+                Our Team
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="page-intro">
+
+            <h1>
+                Our Services
+            </h1>
+
+            <p>
+                Building capability. Strengthening organisations.
+                Raising service standards.
+            </p>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="intro-block">
+
+            <h2 class="section-title">
+                Our Solutions
+            </h2>
+
+
+            <p>
+                Ardent Synergy provides professional solutions designed
+                to strengthen people, teams, organisations, and
+                institutional environments.
+            </p>
+
+
+            <p>
+                Our approach combines capability building, strategic
+                support, safeguarding, workforce development, and
+                operational improvement to help organisations close
+                performance gaps and achieve sustainable success.
+            </p>
+
+        </section>
+
+
+        <!-- SERVICES -->
+
+        <h2 class="section-title">
+            Our Core Business Segments
+        </h2>
+
+
+        <section class="services-grid">
+
+
+            <!-- TRAINING -->
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h3>
+                    Training
+                </h3>
+
+                <p>
+                    Delivering high-quality capability-building
+                    frameworks, leadership tracks, and customised
+                    professional skills development to elevate
+                    individual capabilities and workforce productivity.
+                </p>
+
+            </div>
+
+
+            <!-- CONSULTANCY -->
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h3>
+                    Consultancy
+                </h3>
+
+                <p>
+                    Providing corporate counsel, institutional
+                    design reviews, operational auditing, and workflow
+                    strategies to enable continuous improvement and
+                    sustainable organisational success.
+                </p>
+
+            </div>
+
+
+            <!-- SAFEGUARDING -->
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h3>
+                    Safeguarding
+                </h3>
+
+                <p>
+                    Developing protective frameworks, institutional
+                    policies, proactive risk management approaches,
+                    and compliance systems that contribute to safer,
+                    more accountable environments.
+                </p>
+
+            </div>
+
+
+            <!-- OUTSOURCING -->
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    04
+                </div>
+
+                <h3>
+                    Outsourcing
+                </h3>
+
+                <p>
+                    Supporting organisations with dependable workforce
+                    and operational solutions that allow teams to focus
+                    on their core objectives while maintaining effective
+                    service delivery.
+                </p>
+
+            </div>
+
+
+            <!-- WORKFORCE DEVELOPMENT -->
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    05
+                </div>
+
+                <h3>
+                    Workforce Development
+                </h3>
+
+                <p>
+                    Strengthening workforce capability through
+                    structured development, professional growth,
+                    performance improvement, and sustainable
+                    organisational capacity building.
+                </p>
+
+            </div>
+
+
+            <!-- INSTITUTIONAL DEVELOPMENT -->
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    06
+                </div>
+
+                <h3>
+                    Institutional Development
+                </h3>
+
+                <p>
+                    Helping organisations strengthen their systems,
+                    structures, processes, and standards to create
+                    stronger and more effective institutional
+                    environments.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- OUR APPROACH -->
+
+        <section class="approach-block">
+
+            <h2>
+                Our Approach
+            </h2>
+
+            <p>
+                We work closely with our clients to understand their
+                current position, identify structural and performance
+                gaps, and develop practical solutions that create
+                meaningful improvement. Our focus is not simply on
+                delivering a service, but on creating lasting value,
+                stronger capabilities, and higher standards.
+            </p>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="cta-banner">
+
+            <h2>
+                Ready to Raise Your Standards?
+            </h2>
+
+            <p>
+                Discover how Ardent Synergy can support your people,
+                organisation, and workforce development goals.
+            </p>
+
+            <a
+                href="contact.html"
+                class="cta-button"
+            >
+                Contact Us
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Ardent Synergy Global
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ardent Synergy | Home</title>
+
+    <!-- Official Brand Fonts:
+         Montserrat = Headings
+         Open Sans = Body Text
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           ARDENT SYNERGY BRAND COLOURS
+           ===================================================== */
+
+        :root {
+            --navy-blue: #002D72;
+            --sky-blue: #5BA9FF;
+            --light-blue: #EAF4FF;
+            --light-grey: #E9EEF5;
+            --white: #FFFFFF;
+            --body-text: #334E77;
+            --dark-text: #0B192C;
+
+            --font-headings: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+
+
+        /* =====================================================
+           GLOBAL RESET
+           ===================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: var(--font-body);
+            font-size: 12pt;
+            line-height: 1.6;
+            color: var(--navy-blue);
+            background-color: #FAFCFF;
+
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        header {
+            background-color: var(--white);
+
+            padding: 20px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom: 3px solid var(--sky-blue);
+
+            box-shadow: 0 4px 20px rgba(0, 45, 114, 0.06);
+
+            position: relative;
+            z-index: 10;
+        }
+
+
+        /* =====================================================
+           LOGO
+           ===================================================== */
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .logo-container img {
+            height: 75px;
+            width: auto;
+            display: block;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+           ===================================================== */
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+
+        nav a {
+            font-family: var(--font-headings);
+            font-weight: 600;
+            font-size: 10.5pt;
+
+            color: var(--navy-blue);
+
+            text-decoration: none;
+            text-transform: uppercase;
+
+            letter-spacing: 0.4px;
+
+            padding: 8px 0;
+
+            position: relative;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        nav a:hover,
+        nav a.active {
+            color: var(--sky-blue);
+        }
+
+
+        nav a:hover {
+            transform: translateY(-1px);
+        }
+
+
+        /* Official-style active navigation underline */
+
+        nav a.active::after {
+            content: '';
+
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 3px;
+
+            background-color: var(--sky-blue);
+
+            border-radius: 2px;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+           ===================================================== */
+
+        main {
+            flex: 1;
+
+            width: 90%;
+            max-width: 1140px;
+
+            margin: 50px auto 70px;
+        }
+
+
+        /* =====================================================
+           HERO SECTION
+           ===================================================== */
+
+        .hero {
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--navy-blue) 0%,
+                    #001F50 100%
+                );
+
+            color: var(--white);
+
+            padding: 90px 50px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            margin-bottom: 50px;
+
+            box-shadow:
+                0 12px 35px rgba(0, 45, 114, 0.16);
+        }
+
+
+        /*
+           Subtle branded curved element.
+           Inspired by the swoosh/flow of the official logo.
+        */
+
+        .hero::after {
+            content: '';
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            right: -180px;
+            bottom: -250px;
+
+            border: 35px solid rgba(91, 169, 255, 0.18);
+
+            border-radius: 50%;
+
+            transform: rotate(-20deg);
+
+            pointer-events: none;
+        }
+
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .hero h1 {
+            font-family: var(--font-headings);
+
+            font-size: 38pt;
+            font-weight: 700;
+
+            letter-spacing: -0.5px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .hero .tagline {
+            font-family: var(--font-headings);
+
+            font-size: 16pt;
+            font-weight: 500;
+
+            color: var(--sky-blue);
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero-description {
+            max-width: 720px;
+
+            margin: 0 auto;
+
+            color: #EAF4FF;
+
+            font-size: 12pt;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           BRAND SLOGAN
+           ===================================================== */
+
+        .slogan-section {
+            background-color: var(--white);
+
+            border-top: 4px solid var(--sky-blue);
+
+            padding: 35px 30px;
+
+            margin-bottom: 55px;
+
+            border-radius: 8px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 20px rgba(0, 45, 114, 0.04);
+        }
+
+
+        .slogan-quote {
+            font-family: var(--font-headings);
+
+            font-size: 18pt;
+            font-weight: 600;
+
+            font-style: italic;
+
+            color: var(--navy-blue);
+        }
+
+
+        /* =====================================================
+           SECTION TITLES
+           ===================================================== */
+
+        .section-title {
+            font-family: var(--font-headings);
+
+            font-size: 24pt;
+            font-weight: 700;
+
+            color: var(--navy-blue);
+
+            margin-bottom: 30px;
+
+            position: relative;
+
+            padding-bottom: 12px;
+        }
+
+
+        .section-title::after {
+            content: '';
+
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+
+            width: 60px;
+            height: 4px;
+
+            background-color: var(--sky-blue);
+
+            border-radius: 2px;
+        }
+
+
+        /* =====================================================
+           BRAND STORY
+           ===================================================== */
+
+        .content-block {
+            background-color: var(--white);
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(0, 45, 114, 0.05);
+
+            box-shadow:
+                0 5px 25px rgba(0, 45, 114, 0.04);
+
+            margin-bottom: 55px;
+        }
+
+
+        .content-block p {
+            margin-bottom: 20px;
+
+            font-size: 12pt;
+
+            color: var(--body-text);
+
+            line-height: 1.8;
+        }
+
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .content-block strong {
+            color: var(--navy-blue);
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           BRAND PILLARS
+           ===================================================== */
+
+        .matrix-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 28px;
+
+            margin-bottom: 55px;
+        }
+
+
+        /* =====================================================
+           MODERN CARD
+           ===================================================== */
+
+        .modern-card {
+            position: relative;
+
+            background-color: var(--white);
+
+            border: 1px solid rgba(0, 45, 114, 0.07);
+
+            padding: 35px 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 8px 24px rgba(0, 45, 114, 0.035);
+
+            display: flex;
+            flex-direction: column;
+
+            min-height: 190px;
+
+            /*
+               KEEPING GEMINI'S HOVER EFFECT
+            */
+
+            transition:
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        /*
+           THE HOVER EFFECT YOU LIKED
+        */
+
+        .modern-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 16px 35px rgba(0, 45, 114, 0.10);
+
+            border-color: var(--sky-blue);
+        }
+
+
+        .modern-card::before {
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 0;
+            height: 4px;
+
+            background-color: var(--sky-blue);
+
+            border-radius: 10px 0 0 0;
+
+            transition: width 0.3s ease;
+        }
+
+
+        .modern-card:hover::before {
+            width: 100%;
+        }
+
+
+        .modern-card h3 {
+            font-family: var(--font-headings);
+
+            font-weight: 700;
+
+            font-size: 15pt;
+
+            color: var(--navy-blue);
+
+            margin-bottom: 15px;
+        }
+
+
+        .modern-card p {
+            font-size: 11pt;
+
+            color: #4A658E;
+
+            line-height: 1.7;
+
+            flex-grow: 1;
+        }
+
+
+        /* =====================================================
+           CALL TO ACTION
+           ===================================================== */
+
+        .cta-banner {
+            position: relative;
+
+            overflow: hidden;
+
+            background-color: var(--light-blue);
+
+            padding: 45px 30px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            margin-bottom: 20px;
+
+            border: 1px solid rgba(91, 169, 255, 0.25);
+        }
+
+
+        .cta-banner p {
+            font-family: var(--font-headings);
+
+            font-size: 13pt;
+
+            font-weight: 600;
+
+            color: var(--navy-blue);
+
+            margin-bottom: 20px;
+        }
+
+
+        .cta-banner a {
+            display: inline-block;
+
+            background-color: var(--navy-blue);
+
+            color: var(--white);
+
+            text-decoration: none;
+
+            padding: 14px 35px;
+
+            font-family: var(--font-headings);
+
+            font-weight: 600;
+
+            border-radius: 6px;
+
+            transition:
+                background-color 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+
+        .cta-banner a:hover {
+            background-color: var(--sky-blue);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 7px 18px rgba(0, 45, 114, 0.15);
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        footer {
+            position: relative;
+
+            background-color: var(--navy-blue);
+
+            color: var(--white);
+
+            padding: 28px 20px;
+
+            text-align: center;
+
+            font-family: var(--font-body);
+
+            font-size: 10.5pt;
+
+            letter-spacing: 0.4px;
+
+            margin-top: auto;
+
+            border-top: 4px solid var(--sky-blue);
+        }
+
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE DESIGN
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 18px;
+
+                padding: 20px 5%;
+            }
+
+
+            nav {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 18px;
+            }
+
+
+            .matrix-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .hero {
+                padding: 70px 35px;
+            }
+
+
+            .hero h1 {
+                font-size: 30pt;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .logo-container img {
+                height: 62px;
+            }
+
+
+            nav {
+                gap: 14px;
+            }
+
+
+            nav a {
+                font-size: 9pt;
+            }
+
+
+            main {
+                width: 92%;
+
+                margin-top: 30px;
+            }
+
+
+            .hero {
+                padding: 55px 25px;
+            }
+
+
+            .hero h1 {
+                font-size: 25pt;
+            }
+
+
+            .hero .tagline {
+                font-size: 13pt;
+            }
+
+
+            .section-title {
+                font-size: 20pt;
+            }
+
+
+            .content-block {
+                padding: 28px 22px;
+            }
+
+
+            .matrix-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .modern-card {
+                min-height: auto;
+            }
+
+
+            .slogan-section {
+                padding: 28px 20px;
+            }
+
+
+            .slogan-quote {
+                font-size: 15pt;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+        <div class="logo-container">
+
+            <!--
+                KEEP YOUR EXISTING LOGO FILE HERE.
+                Do not stretch or distort the logo.
+            -->
+
+            <img
+                src="Images/logo2.jpg"
+                alt="Ardent Synergy Logo"
+            >
+
+        </div>
+
+
+        <nav>
+
+            <a
+                href="Ardent Synergy.html"
+                class="active"
+            >
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="team.html">
+                Our Team
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    Ardent Synergy
+                </h1>
+
+
+                <p class="tagline">
+                    Raising Service Standards, One Professional at a Time.
+                </p>
+
+
+                <p class="hero-description">
+                    Empowering people, strengthening organisations,
+                    and raising service standards through professional
+                    development, collaboration, and purposeful solutions.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BRAND SLOGAN
+             ================================================= -->
+
+        <section class="slogan-section">
+
+            <p class="slogan-quote">
+                "Excellence is not an act; it is a standard."
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             BRAND STORY
+             ================================================= -->
+
+        <section class="content-block">
+
+            <h2 class="section-title">
+                Our Brand Story
+            </h2>
+
+
+            <p>
+                <strong>
+                    People and organisations perform better when service
+                    standards improve.
+                </strong>
+                Ardent Synergy was established to serve as an authoritative
+                framework for capability-building, strategy formulation,
+                and institutional development. Our operations focus heavily
+                on equipping organisations with sustainable performance
+                patterns that bridge current structural gaps with global
+                standards of execution.
+            </p>
+
+
+            <p>
+                The name <strong>Ardent</strong> marks our passion,
+                unyielding commitment, diligence, and purposeful dedication
+                to excellence. <strong>Synergy</strong> underscores our
+                methodology of driving shared success and long-term
+                organisational value through authentic collaboration and
+                partnership.
+            </p>
+
+
+            <p>
+                Our objective is to drive workforce transformations that
+                matter — helping people and organisations become better,
+                stronger, safer, more professional, and more effective.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             BRAND PILLARS
+             ================================================= -->
+
+        <h2 class="section-title">
+            Our Brand Pillars
+        </h2>
+
+
+        <section class="matrix-grid">
+
+
+            <div class="modern-card">
+
+                <h3>
+                    Excellence
+                </h3>
+
+                <p>
+                    We set high standards and continuously look for ways
+                    to improve the quality of our services and solutions.
+                </p>
+
+            </div>
+
+
+            <div class="modern-card">
+
+                <h3>
+                    Professionalism
+                </h3>
+
+                <p>
+                    We conduct ourselves with the highest level of
+                    competence, respect, and dedication in all our
+                    engagements.
+                </p>
+
+            </div>
+
+
+            <div class="modern-card">
+
+                <h3>
+                    Integrity
+                </h3>
+
+                <p>
+                    We are honest, transparent, and ethical in all our
+                    dealings, building trust with our clients and partners.
+                </p>
+
+            </div>
+
+
+            <div class="modern-card">
+
+                <h3>
+                    Accountability
+                </h3>
+
+                <p>
+                    We take full responsibility for our actions,
+                    commitments, and the outcomes of our work.
+                </p>
+
+            </div>
+
+
+            <div class="modern-card">
+
+                <h3>
+                    Ownership
+                </h3>
+
+                <p>
+                    We approach our work with a sense of responsibility
+                    and commitment, treating our clients' objectives
+                    as our own.
+                </p>
+
+            </div>
+
+
+            <div class="modern-card">
+
+                <h3>
+                    Continuous Improvement
+                </h3>
+
+                <p>
+                    We are dedicated to ongoing learning, innovation,
+                    and development to stay ahead in a changing
+                    environment.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             CALL TO ACTION
+             ================================================= -->
+
+        <section class="cta-banner">
+
+            <p>
+                Ready to learn how we raise workforce and operational
+                development standards?
+            </p>
+
+
+            <a href="about.html">
+                Discover Our Approach
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Ardent Synergy Global
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
